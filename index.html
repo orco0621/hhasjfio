@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>MiAplicacion</title>
+<link href="jquery-mobile/jquery.mobile.theme-1.3.0.min.css" rel="stylesheet" type="text/css">
+<link href="jquery-mobile/jquery.mobile.structure-1.3.0.min.css" rel="stylesheet" type="text/css">
+<script src="jquery-mobile/jquery-1.11.1.min.js"></script>
+<script src="jquery-mobile/jquery.mobile-1.3.0.min.js"></script>
+</head>
+
+<body>
+<div data-role="page" id="page">
+  <div data-role="header">
+    <h1>ORLANDO ANDRES <br> CORREA DURAN</h1>
+  </div>
+  <div data-role="content">
+    <a href="#pagina1" data-role="button">CALCULADORA</a>
+  </div>
+  <div data-role="footer">
+    <h4>"UNITROPICO"</h4>
+  </div>
+</div>
+<div data-role="page" id="pagina1">
+  <div data-role="header">
+    <h1>ORLANDO ANDRES<br> CORREA DURAN</h1>
+  </div>
+<!--
+
+<form name="calc">
+Crea el formulario.
+<input type="Text" name="operando1" value="0" size="12">
+<input type="Text" name="operando2" value ="0" size="12">
+Crea las cajas para introducir los valores de las variables operando1 y operando2.
+<input type="Button" name="" value=" + " onclick="calcula('+')">
+<input type="Button" name="" value=" - " onclick="calcula('-')">
+<input type="Button" name="" value=" X " onclick="calcula('*')">
+<input type="Button" name="" value=" / " onclick="calcula('/')">
+Crea los botones para introducir las variables para que se pueda calcular el resultado del operando1 y el operando2.
+<input type="Text" name="resultado" value="0" size="12"
+Crea la caja para introducir el resultado del operando1 y el operando2.
+</form>
+Cerramos el formulario.
+
+-->
+<Font color=red>Ingresa las 2 cifras a calcular:</Font><br>
+<form name="calc">
+<label>Primer Numero:</label><br>
+<input type="text" name="operando1" size="10" maxlength="10"><br>
+<label>Segundo Numero:</label><br>
+<input type="text" name="operando2" size="10" maxlength="10"><br>
+<input type="button" name="sumar" value="Sumar" onClick="calcula('+')">
+<input type="button" name="restar"value="Restar" onClick="calcula('-')">
+<input type="button" name="dividir" value="Dividir" onClick="calcula('/')">
+<input type="button" name="multiplicar" value="Multiplicar" onClick="calcula('*')">
+<br><br>
+<label>Resultado:</label><br>
+<input type="Text" name="resultado" size="12">
+</form>
+<div data-role="footer">
+    <h4>"UNITROPICO"</h4>
+  </div>
+  
+<script>
+function calcula(operacion){
+    var operando1 = document.calc.operando1.value
+    var operando2 = document.calc.operando2.value 
+    var result = eval(operando1 + operacion + operando2)
+    document.calc.resultado.value = result
+}
+</script>
+<!--
+
+Function calcula(operacion){
+Su función es hacer la operación. Mas adelante veremos como la aplica en la caja.
+var operando1 = document.calc.operando1.value
+var operando2 = document.calc.operando2.value 
+operando1 y operando2 son los que tienen los valores con los que se hará las operaciones.
+var result = eval(operando1 + operacion + operando2)
+Nos produce el resultado de la operación entre operando1 y operando2.
+document.calc.resultado.value = result
+Nos escribe el resultado en la caja.
+
+-->
+</div>
+</div>
+
+</body>
+</html>
